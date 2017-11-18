@@ -1,0 +1,82 @@
+mixin titleSeparator(item)
+  .container
+    .o-intro
+      .row.center-align
+        .col.s12
+          .c-title__separator(class=item.subtitle ? '' : 'u-margin__bottom--small')
+            if item.subtitle
+              h4.o-intro__subtitle #{item.subtitle} :
+        .col.s12
+          h2.o-intro__title #{item.title}
+            i.material-icons play_arrow
+        .col.s12
+          p.o-intro__description #{item.description}
+        if block
+          .col.s12
+            block
+
+mixin articles(items)
+  .container
+    .row
+      each item in items
+        .col.s12.m4
+          a.c-article(href=item.link)
+            .c-article__image
+              img(src= item.image, alt="").responsive-img
+            .c-article__body
+              p.c-article__name= item.title
+
+mixin products(items)
+  .row.u-margin__none
+    each item in items
+      .col.s12.m6.l3
+        a.c-product(href=item.link)
+          .c-product__image
+            each img in item.images
+              img(src= img.link, alt="")
+          .c-product__body
+            h5.c-product__name= item.title
+
+mixin titleBack(title,description)
+  .o-intro__back.container.center-align.u-padding__lr--small
+    .row
+      .col.s12
+        h2.o-intro__back--title= title
+      .col.s12
+        h5.o-intro__back--subtitle= description
+
+mixin list(title,items)
+  .c-listCategory
+    h6.c-listCategory__title= title
+    ul
+      each item in items
+        li.c-listCategory__item
+          a(href= item.link).u-hover__linear.u-hover__linear--base= item.name
+
+mixin desCategory(filter,items)
+  each item in items
+    if(item.name == filter)
+      .c-desCategory.row&attributes(attributes)
+        .col.s12.m8
+          a(href= item.link).c-desCategory__image
+            img(src="http://demandware.edgesuite.net/aaox_prd/on/demandware.static/-/Sites/default/dw8c47f7c9/images/slot/landing/Furniture%20LP/FurnitureSP17Furniture.jpg", alt="").responsive-img
+        .col.s12.m4
+          .c-desCategory__content.center-align
+            h2.c-desCategory__title.c-title__underline= item.name
+            p.c-desCategory__description= item.description
+            each button in item.buttons
+              a.c-desCategory__button(href= button.link)= button.title
+
+mixin product(items)
+  each item in items
+    .c-product.c-product__linear.pinto&attributes(attributes)
+      a(href= item.ruta).c-product__image
+        each image in item.images
+          img(src= image.link, alt="").responsive-img
+      .c-product__content.center-align
+          p.c-product__category= item.category
+          h4.c-product__name.u-margin__none= item.name
+          p.c-product__price= item.price
+          a(href=item.ruta).c-product__button.waves-effect.waves.btn 
+            i.material-icons.left shopping_cart
+            | Añadir al carrito

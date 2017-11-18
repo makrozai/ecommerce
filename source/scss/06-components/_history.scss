@@ -1,0 +1,20 @@
+.c-history{
+  display: flex;
+  flex-wrap:wrap;
+  align-items:center;
+  &__item{
+    font-size: 1rem;
+    color: color('grey','lighten-1');
+    display: flex;
+    align-items:center;
+    font-style: italic;
+    &:last-child, &:before{
+      color: color('grey','lighten-1');
+    }
+    &:before{
+      font-style:italic;
+      margin: 0;
+      color: color('grey','lighten-2');
+    }
+  }
+}

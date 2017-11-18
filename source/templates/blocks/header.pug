@@ -1,0 +1,27 @@
+header.o-header
+      .container
+        .row.valign-wrapper.u-margin__tb--small
+          .col.s12.m5.o-header__message.hide-on-med-and-down  
+            p Free Shipping on eligible orders over $150
+          .col.s12.m2
+            img(src="source/img/logo.gif", alt="").responsive-img.o-header__logo
+          .col.s12.m5.right-align.hide-on-med-and-down  
+            ul.o-header__asset
+              li 
+                a(href="#!").u-hover__linear.u-hover__linear--base JA's World
+              li
+                a(href="#!").u-hover__linear.u-hover__linear--base Registry
+              li
+                a(href="#!").u-hover__linear.u-hover__linear--base My Account
+              li
+                a(href="#!").u-hover__linear.u-hover__linear--base search
+        .row
+          .col.s12
+            nav.o-header__menu
+              .nav-wrapper
+                a(href="#" data-activates="mobile-demo").button-collapse
+                  i.material-icons menu
+                ul#nav-mobile.hide-on-med-and-down.o-header__list
+                  each item in navlist
+                    li.o-header__item
+                      a(href="#!")= item.name

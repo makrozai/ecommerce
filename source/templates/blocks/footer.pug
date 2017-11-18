@@ -1,0 +1,29 @@
+footer.o-footer
+  .o-footer__copy
+    .container
+      | JOIN OUR LIST AND BE IN THE KNOW.
+      .right
+        a
+          i.material-icons place
+        a
+          i.material-icons place
+        a
+          i.material-icons place
+  .container
+    .row.u-margin__none.u-padding__tb--small
+      each item in footer
+        .col.l2.s12
+          h6.o-footer__title.u-padding__tb--small.u-margin__tb--small= item.title
+          ul.o-footer__list
+            each link in item.list
+              li.o-footer__item.u-padding__tb--chick
+                if link.link
+                  a(href="#!").u-hover__linear.u-hover__linear= link.name
+                else
+                  p= link.name
+      
+      .col.l2.s12
+        h6.o-footer__title.u-padding__tb--small.u-margin__tb--small MAP
+        img(src="http://demandware.edgesuite.net/aaox_prd/on/demandware.static/Sites-jonathan-adler-us-Site/-/default/dw8e56e743/images/store-locator-null.png", alt="").responsive-img
+      .col.s12
+        p ©2016 Fito Espinosa. Todos los derechos reservados.

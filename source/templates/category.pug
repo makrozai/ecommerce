@@ -1,0 +1,37 @@
+include settings/variables
+include components/mixins
+<!DOCTYPE html>
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    title Tienda FitoEspinosa
+    link(rel="stylesheet", href="dist/app.css")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+  body
+    include blocks/header
+    
+    .container
+      .row
+        .col.s12.l3
+          .o-aside
+            .c-history.nav-wrapper.u-margin__bottom--large
+              a.breadcrumb.c-history__item(href="#!") Inicio
+              a.breadcrumb.c-history__item(href="#1") Categorias
+              a.breadcrumb.c-history__item(href="#2") Pinturas
+            
+            +list('BY CATEGORY',category)
+        .col.s12.l9
+          +desCategory('FURNITURE',desCategory)(class="c-desCategory__reverse")
+          
+          #productList
+            +product(items)(class="z-depth-1")
+
+          
+    include blocks/footer
+    
+
+    script(src="https://code.jquery.com/jquery-3.2.1.min.js")
+    script(src="source/transpiled_js/materialize.min.js")
+    script(src="source/transpiled_js/jquery.pinto.min.js")
+    script(src="source/transpiled_js/script.js")

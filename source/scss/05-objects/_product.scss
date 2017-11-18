@@ -1,0 +1,120 @@
+.o-product{
+  &__image{
+    position: relative;
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  &__items{
+    display: flex;
+    margin: 1em 0;
+    &-image{
+      position: relative;
+      display: block;
+      margin-right: 1em;
+      width: 6em;
+      height: 6em;
+      background: red;
+      overflow: hidden;
+      cursor: pointer;
+
+      img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform:translate(-50%,-50%);
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  &__title{
+    font-size: 2em;
+    text-transform: uppercase;
+    font-weight: 500;
+    color:$primary-color;
+  }
+  &__message{
+    color: color('grey','lighten-1');
+  }
+  &__colors{
+    display: flex;
+    li{
+      margin-right: .5em;
+      width: 3em;
+      height: 3em;
+
+      a{
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__tabs{
+    &.col{
+      margin-top: 2em;   
+      padding-top: 2em;   
+    }
+    border-top:1px solid color('grey','lighten-2');
+  }
+  &__tab{
+    &-item{
+      ul{
+        list-style-type: disc;
+        padding-left: 1.5em;
+        li{
+          list-style-type: disc;
+          padding: .5em 0;
+        }
+      }
+    }
+  }
+  &__code{
+    color: color('grey','lighten-1');
+    font-style: italic;
+  }
+  &__count{
+    display: flex;
+    align-items:center;
+
+    &-price{
+      font-size: 1.5em;
+
+      &:before{
+        content: "$ ";
+      }
+    }
+  }
+  &__shopping{
+    display: flex;
+    justify-content:center;
+    font-size: 1.2em;
+    height: 52px;
+    line-height: 52px;
+    box-shadow: 0 0 0 0 transparent;
+
+    &:hover{
+      box-shadow:  0 0 0 0 transparent;
+    }
+  }
+  &__share{
+    display: flex;
+    justify-content:center;
+  }
+  &__social{
+    display: flex;
+    justify-content:center;
+    color: color('grey','base');
+    a{
+      color: color('grey','lighten-1');
+      padding: 0 .2em;
+      transition:all .3s;
+
+      &:hover{
+        color:color('grey','darken-1');
+      }
+    }
+  }
+}

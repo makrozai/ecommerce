@@ -1,0 +1,14 @@
+.c-listCategory{
+  &__title{
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 1em;
+    border-bottom: 1px solid color('grey','lighten-2');
+  }
+  &__item{
+    a{
+      display: inline-block;
+      padding:.2em 0;
+    }
+  }
+}

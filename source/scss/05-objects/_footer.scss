@@ -1,0 +1,17 @@
+.o-footer{
+  background: color('grey','lighten-2');
+  &__copy{
+    padding: 1em 0;
+    color:white;
+    background: color('grey','darken-1');
+  }
+  &__title{
+    border-bottom: 1px solid lighten($off-black,40);
+  }
+  &__item{
+    a{
+      color: $off-black;
+      
+    }
+  }
+}

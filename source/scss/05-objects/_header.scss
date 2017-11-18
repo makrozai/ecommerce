@@ -1,0 +1,47 @@
+.o-header{
+  &__message{
+    color: $primary-color;
+  }
+  &__asset{
+    display: flex;
+    
+    li:first-child{
+      margin-left: auto;
+    }
+    a{
+      display: block;
+      margin: .3em 1em;
+      position: relative;
+
+      
+    }
+  }
+  &__menu{
+    background: transparent;
+    box-shadow: 0 1px 0 0 color('grey','lighten-2'),
+                0 -1px 0 0 color('grey','lighten-2');
+
+    a{
+      color: $primary-color;
+      position: relative;
+
+      &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 0;
+        bottom: 0;
+        left: 0;
+        background: $primary-color;
+        transition: all .3s;
+      }
+      &:hover{
+        background: transparent;
+        &:before{
+          height: 4px;
+        }
+      }
+    }
+  }
+}

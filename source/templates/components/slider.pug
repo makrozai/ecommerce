@@ -1,0 +1,9 @@
+.container
+  .slider
+    ul.slides
+      each slid in slider
+        li
+          img(src= slid.image)
+          .caption.center-align
+            h3= slid.title
+            h5.light.grey-text.text-lighten-3= slid.subtitle
