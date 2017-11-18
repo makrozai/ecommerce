@@ -1,7 +1,4 @@
-# Athelas static boilerplate
-
-Ahora con **Pug**
-
+# static boilerplate
 
 ## Install
 
